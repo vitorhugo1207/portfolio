@@ -1,9 +1,9 @@
 class Portifolio{
   constructor(){
-    this.bio = document.querySelector("#bio")
-    this.pic = document.querySelector("#pic")
-    this.about = document.querySelector("#about-content")
-  }
+    this.bio = document.querySelector("#bio");
+    this.pic = document.querySelector("#pic");
+    this.about = document.querySelector("#about-content");
+  };
 
   async setPic() {
     try{
@@ -15,7 +15,8 @@ class Portifolio{
       this.pic.src = "error_img.jpg"
       this.pic.style = "border-radius: 0%;"
     }
-  }
+  };
+
   async setBio(){
     try{
       let response = await fetch("contents/bio_home.txt");
@@ -25,15 +26,16 @@ class Portifolio{
     catch{
       this.bio.innerHTML = "Error! Tente ativar o JavaScript do seu navedador.";
     }
-  }
+  };
+
   async setAbout(){
     try{
-      let response = await fetch("contents/about_me.txt");
+      let response = await fetch("../contents/about_me.txt");
       let responseText = await response.text();
-      this.bio.innerHTML = responseText;
+      this.about.innerHTML = responseText;
     }
     catch{
-
+      this.about.innerHTML = "Error! Tente ativar o JavaScript do seu navedador.";
     }
   }
 }
