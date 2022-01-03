@@ -30,12 +30,27 @@ class Portifolio{
 
   async setAbout(){
     try{
-      let response = await fetch("../contents/about_me.txt");
+      let response = await fetch("contents/about_me.txt");
       let responseText = await response.text();
       this.about.innerHTML = responseText;
     }
     catch{
       this.about.innerHTML = "Error! Tente ativar o JavaScript do seu navedador.";
     }
+  };
+
+  async setProjects(){
+    let response = await fetch("contents/projects.json");
+    let responseJson = await response.json();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var p = document.createElement('p');
+
+      p.innerHTML = responseJson.one.bio;
+      p.id = "bio-project";
+      // p.style.cssText = 'border-left: 8px solid aqua;';
+
+      document.querySelector(".projeto-contents").appendChild(p);
+    }, false)
   }
 }

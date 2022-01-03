@@ -18,7 +18,7 @@ a:hover {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 4vh;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -34,6 +34,7 @@ nav {
 }
 
 .nav-list {
+  font-size: 2.8vh;
   list-style: none;
   display: flex;
 }
@@ -92,6 +93,10 @@ nav {
   .mobile-menu {
     /* ajust moble menu with menu itens*/
     display: block;
+  }
+  .projetos{
+    flex-direction: column !important;
+    align-items: center;
   }
 }
 
@@ -159,12 +164,20 @@ h1{
 }
 
 .projetos{
+  flex-direction: row;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.projeto-1{
-  background: #373b42;
-  height: 6vh;
-  width: 6vh;
+
+.projeto-contents{
+  width: 30%;
+  display: table-cell;
+  vertical-align: middle;
   margin-top: 6vh;
+  background: #373b42;
+  color: #fff;
+  border: 15px solid #373b42;
+  border-left: 8px solid aqua;
+  flex-basis: 33%;
 }
