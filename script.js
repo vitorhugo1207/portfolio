@@ -1,61 +1,63 @@
-class Portifolio{
-  constructor(){
+class Portifolio {
+  constructor() {
     this.bio = document.querySelector("#bio");
     this.pic = document.querySelector("#pic");
     this.about = document.querySelector("#about-content");
   };
 
-  async init(){
+  async init() {
     let title = document.title;
 
-    if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio"){
+    if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio") {
       this.setProjects()
     };
-    if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio"){
+    if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
       alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.");
       this.setBio();
       this.setPic()
     };
-    if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio"){
+    if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
       this.setAbout()
     };
   };
 
   async setPic() {
-    try{
+    try {
       let response = await fetch("https://api.github.com/users/vitorhugo1207");
       let responseJson = await response.json();
       this.pic.src = responseJson.avatar_url;
     }
-    catch{
+    catch {
       this.pic.src = "error_img.jpg";
       this.pic.style = "border-radius: 0%;";
     }
   };
 
-  async setBio(){
-    try{
+  async setBio() {
+    try {
       let response = await fetch("contents/bio_home.txt");
       let responseText = await response.text();
       this.bio.innerHTML = responseText;
     }
-    catch{
+    catch {
       this.bio.innerHTML = "Error! Tente ativar o JavaScript do seu navedador."
     }
   };
 
-  async setAbout(){
-    try{
+  async setAbout() {
+    try {
       let response = await fetch("contents/about_me.txt");
       let responseText = await response.text();
       this.about.innerHTML = responseText;
     }
-    catch{
+    catch {
       this.about.innerHTML = "Error! Tente ativar o JavaScript do seu navedador.";
     }
   };
 
   setProjects() {
+    let response_promise = fetch("contents/projects.json");
+
     document.addEventListener("DOMContentLoaded", function() {
       response_promise.then(response => response.json().then(responseJson => {
         var p = document.createElement('p');
