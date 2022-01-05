@@ -180,4 +180,5 @@ h1{
   border: 15px solid #373b42;
   border-left: 8px solid aqua;
   flex-basis: 33%;
+  padding-left: 1%;
 }
