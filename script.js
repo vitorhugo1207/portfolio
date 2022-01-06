@@ -12,9 +12,9 @@ class Portifolio {
       this.setProjects()
     };
     if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
-      alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.");
       this.setBio();
       this.setPic()
+      alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.");
     };
     if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
       this.setAbout()
