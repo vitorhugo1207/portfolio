@@ -23,6 +23,11 @@ a:hover {
   letter-spacing: 4px;
 }
 
+.wrapper{
+  position: relative;
+  overflow: hidden;
+}
+
 nav {
   /* display organize by each side other; justify-content add space around (half of space between them); aligin-items center vertical; */
   display: flex;
