@@ -168,14 +168,14 @@ h1{
   margin-top: 5%;
 }
 
-.projetos{
+.projects{
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.projeto-contents{
+.project{
   width: 30%;
   display: table-cell;
   vertical-align: middle;

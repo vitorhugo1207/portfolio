@@ -55,18 +55,31 @@ class Portifolio {
     }
   };
 
-  setProjects() {
-    let response_promise = fetch("contents/projects.json");
+  async setProjects() {
+    let response_promise = fetch("contents/projects.json")
 
     document.addEventListener("DOMContentLoaded", function() {
-      response_promise.then(response => response.json().then(responseJson => {
-        var p = document.createElement('p');
+      response_promise.then(response => response.json().then(projects => {
 
-        p.innerHTML = responseJson.one.bio;
-        p.id = "bio-project";
-        // p.style.cssText = 'border-left: 8px solid aqua;';
+        for(let project in projects){
+          console.log(project);
+          console.log (projects[project].name);
 
-        document.querySelector(".projeto-contents").appendChild(p);
+          var div = document.createElement("div");
+          div.className = "project";
+          div.id = `project-${projects[project].name}`
+          document.querySelector(".projects").appendChild(div);
+
+          var h1 = document.createElement("h1");
+          h1.className = "tittle-project";
+          h1.innerHTML = projects[project].name;
+          document.querySelector(`#project-${projects[project].name}`).appendChild(h1);
+
+          var p = document.createElement("p");
+          p.className = "about-project";
+          p.innerHTML = projects[project].bio;
+          document.querySelector(`#project-${projects[project].name}`).appendChild(p);
+        }
       }))
     }, false)
   }
