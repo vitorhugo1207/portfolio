@@ -62,22 +62,22 @@ class Portifolio {
       response_promise.then(response => response.json().then(projects => {
 
         for(let project in projects){
-          console.log(project);
-          console.log (projects[project].name);
-
+          // Div project
           var div = document.createElement("div");
           div.className = "project";
           div.id = `project-${projects[project].name}`
           document.querySelector(".projects").appendChild(div);
 
+          // Tittle project
           var h1 = document.createElement("h1");
           h1.className = "tittle-project";
           h1.innerHTML = projects[project].name;
           document.querySelector(`#project-${projects[project].name}`).appendChild(h1);
 
+          // Paragraph project
           var p = document.createElement("p");
           p.className = "about-project";
-          p.innerHTML = projects[project].bio;
+          p.innerHTML = projects[project].about;
           document.querySelector(`#project-${projects[project].name}`).appendChild(p);
         }
       }))
