@@ -60,6 +60,7 @@ class Portifolio {
 
     document.addEventListener("DOMContentLoaded", function() {
       response_promise.then(response => response.json().then(projects => {
+        // ? Gradient in border for each color language
 
         for(let project in projects){
           // Div project

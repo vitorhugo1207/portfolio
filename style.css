@@ -184,13 +184,20 @@ h1{
   color: #fff;
   border: 15px solid #373b42;
   border-left: 8px solid aqua;
+  box-shadow: 0 0 4px #373b42;
   flex-basis: 33%;
   padding-left: 1%;
+  cursor: pointer;
 }
 
 .project:hover{
-  /* TODO: put shadow */
+  box-shadow: 0 0 10px #373b42;
   opacity: 0.95;
-  transform: scale(1.05);
-  transition: transform .2s;
+  transform: scale(1.02);
+  transition: transform .3s;
+}
+
+.about-project{
+  text-align: justify;
+  padding-top: 2%;
 }
