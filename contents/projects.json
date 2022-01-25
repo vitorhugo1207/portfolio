@@ -1,15 +1,15 @@
 {
-  "one":{
+  "1":{
     "name":"Maid-chan",
     "about":"Maid-Chan is a bot for Discord build in Maid-chan is build in Discord.py, has purpose help in the administration of the server, recreation and several utilities. Maid-Chan is also a bot that respect your privicy, so Maid-Chan doesn't collect information unnecessary information.",
     "language":"Python"
   },
-  "two":{
+  "2":{
     "name":"Derivatives-Tic-Tac-Toe",
     "about":"This project in group of calculus with goal study derivatives. College Fatec Lins.",
     "language":"HTML, CSS e JavaScript"
   },
-  "1":{
+  "3":{
     "name":"portfolio",
     "about":"My portfolio.",
     "language":"HTML, CSS e JavaScript"

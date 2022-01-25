@@ -3,13 +3,18 @@ class Portifolio {
     this.bio = document.querySelector("#bio");
     this.pic = document.querySelector("#pic");
     this.about = document.querySelector("#about-content");
+    this.projects = document.querySelector(".projects")
+    this.modalBoxes = document.querySelector(".modal-boxes")
+    this.modalBoxesContents = document.querySelector(".modal-boxes-contents")
+    this.modalBoxesClose = document.querySelector(".modal-boxes-close")
   };
 
   async init() {
     let title = document.title;
 
     if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio") {
-      this.setProjects()
+      this.setProjects();
+      this.ModalBoxes()
     };
     if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
       this.setBio();
@@ -67,7 +72,7 @@ class Portifolio {
           var div = document.createElement("div");
           div.className = "project";
           div.id = `project-${projects[project].name}`
-          document.querySelector(".projects").appendChild(div);
+          var divname = document.querySelector(".projects").appendChild(div);
 
           // Tittle project
           var h1 = document.createElement("h1");
@@ -83,6 +88,20 @@ class Portifolio {
         }
       }))
     }, false)
+  };
+
+  async ModalBoxes(){
+    let projectsAll = document.querySelector(".projects");
+
+    // console.log(projectsAll.children[0].tagname)
+
+    // for(let project in projectsAll){
+    //   console.log(project)
+    // }
+
+    // divname.onclick = function(){
+    //   this.modalBoxes.style.display = "block"
+    // };
   }
 }
 
