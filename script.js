@@ -13,8 +13,8 @@ class Portifolio {
     let title = document.title;
 
     if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio") {
-      this.setProjects();
-      this.ModalBoxes()
+      this.setProjects()
+      // this.ModalBoxes()
     };
     if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
       this.setBio();
@@ -60,7 +60,7 @@ class Portifolio {
     }
   };
 
-  async setProjects() {
+  setProjects() {
     let response_promise = fetch("contents/projects.json")
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -72,7 +72,7 @@ class Portifolio {
           var div = document.createElement("div");
           div.className = "project";
           div.id = `project-${projects[project].name}`
-          var divname = document.querySelector(".projects").appendChild(div);
+          document.querySelector(".projects").appendChild(div);
 
           // Tittle project
           var h1 = document.createElement("h1");
@@ -86,24 +86,27 @@ class Portifolio {
           p.innerHTML = projects[project].about;
           document.querySelector(`#project-${projects[project].name}`).appendChild(p);
         }
+        // let projectsAll = document.querySelectorAll(".projects")[0].childElementCount;
+        // console.log(projectsAll)
       }))
     }, false)
+
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        this.ModalBoxes()
+      },1000)
+    })
   };
 
-  async ModalBoxes(){
-    let projectsAll = document.querySelector(".projects");
-
-    // console.log(projectsAll.children[0].tagname)
-
-    // for(let project in projectsAll){
-    //   console.log(project)
-    // }
-
-    // divname.onclick = function(){
-    //   this.modalBoxes.style.display = "block"
-    // };
+  ModalBoxes(){
+    let projectsAll = document.querySelectorAll(".projects")[0].children[0];
+    console.log(projectsAll)
+    projectsAll.onclick = function(){
+      this.modalBoxes.style.display = "block";
+    }
   }
 }
 
+
 const portifolio = new Portifolio();
-portifolio.init();
+portifolio.init()
