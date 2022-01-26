@@ -3,10 +3,10 @@ class Portifolio {
     this.bio = document.querySelector("#bio");
     this.pic = document.querySelector("#pic");
     this.about = document.querySelector("#about-content");
-    this.projects = document.querySelector(".projects")
-    this.modalBoxes = document.querySelector(".modal-boxes")
-    this.modalBoxesContents = document.querySelector(".modal-boxes-contents")
-    this.modalBoxesClose = document.querySelector(".modal-boxes-close")
+    this.projects = document.querySelector(".projects");
+    this.modalBox = document.querySelector(".modal-box");
+    this.modalBoxContents = document.querySelector(".modal-box-contents");
+    this.modalBoxClose = document.querySelector(".modal-box-close")
   };
 
   async init() {
@@ -93,20 +93,20 @@ class Portifolio {
 
     return new Promise((resolve, reject)=>{
       setTimeout(()=>{
-        this.ModalBoxes()
+        this.setModalBox()
       },1000)
     })
   };
 
-  ModalBoxes(){
+  setModalBox(){
     let projectsAll = document.querySelectorAll(".projects")[0].children[0];
-    console.log(projectsAll)
+    let modalBox = this.modalBox;
     projectsAll.onclick = function(){
-      this.modalBoxes.style.display = "block";
+      console.log(modalBox)
+      modalBox.style.display = "block";
     }
   }
 }
-
 
 const portifolio = new Portifolio();
 portifolio.init()

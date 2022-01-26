@@ -202,7 +202,7 @@ h1{
   padding-top: 2%;
 }
 
-.modal-boxes{
+.modal-box{
   display: none;
   position: fixed;
   z-index: 1;
@@ -215,7 +215,7 @@ h1{
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-boxes-contents{
+.modal-box-contents{
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -224,15 +224,15 @@ h1{
 }
 
 /* Buttom close */
-.modal-boxes-close{
+.modal-box-close{
   color: #aaa;
   float: right;
   font-size: 24px;
   font-weight: bold;
 }
 
-.modal-boxes-close:hover,
-.modal-boxes-close:focus{
+.modal-box-close:hover,
+.modal-box-close:focus{
   color: black;
   text-decoration: none;
   cursor: pointer;
