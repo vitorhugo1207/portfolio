@@ -7,7 +7,7 @@ body{
   padding: 0;
 }
 
-a {
+.nav-list a, .logo{
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
@@ -39,7 +39,7 @@ nav {
 }
 
 .nav-list {
-  font-size: 2.8vh;
+  font-size: 2.6vh;
   list-style: none;
   display: flex;
 }
@@ -58,7 +58,7 @@ nav {
   width: 32px;
   height: 2px;
   background: #fff;
-  margin: 8px;
+  margin: 1.5vh;
   border-radius: 999px;
   transition: 0.3s;
 }
