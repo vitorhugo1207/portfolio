@@ -13,11 +13,8 @@ class Portifolio {
     let title = document.title;
 
     if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio") {
-      // this.setProjects(() => this.setModalBox());
-
       this.setProjects();
       // this.setModalBox();
-
     };
     if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
       this.setBio();
@@ -63,10 +60,9 @@ class Portifolio {
     }
   };
 
-  setProjects() {
-    let response_promise = fetch("contents/projects.json")
+  async setProjects() {
+      let response_promise = fetch("contents/projects.json")
 
-    document.addEventListener("DOMContentLoaded", function() {
       response_promise.then(response => response.json().then(projects => {
         // ? Gradient in border for each color language
 
@@ -89,53 +85,47 @@ class Portifolio {
           p.innerHTML = projects[project].about;
           document.querySelector(`#project-${projects[project].name}`).appendChild(p);
         }
+        this.setModalBox();
       }))
-    }, false)
-
-    return new Promise((resolve, reject)=>{
-      setTimeout(()=>{
-        this.setModalBox()
-      }, Math.random() * 2000)
-    })
+    // return new Promise((resolve, reject)=>{
+    //   setTimeout(()=>{
+    //     this.setModalBox()
+    //   }, Math.random() * 2000)
+    // })
   };
 
-  setModalBox(){
+  async setModalBox(){
     let projectsLength = document.querySelectorAll(".projects")[0].children.length;
     let modalBox = this.modalBox;
 
-    for(let i = 0; i <= projectsLength; i++){
+    for(let i = 0; i <= projectsLength - 1; i++){
       let projectsAll = document.querySelectorAll(".projects")[0].children[i];
 
-      // That "try" is for not to show error in console
-      try{
-        // Open Modal Box
-        projectsAll.onclick = function(){
-          modalBox.style.display = "block"
-        };
-      }catch{}
-
-      // Close Modal Box, when click at "X"
-      this.modalBoxClose.onclick = function(){
-        modalBox.style.display = "None"
+      // Open Modal Box
+      projectsAll.onclick = function(){
+        modalBox.style.display = "block"
       };
+    };
+    // Close Modal Box, when click at "X"
+    this.modalBoxClose.onclick = function(){
+      modalBox.style.display = "None"
+    };
 
-      // Close Modal Box, when click out of Modal Box
-      window.onclick = function(){
-        if(event.target == modalBox){
-          modalBox.style.display = "None"
-        }
+    // Close Modal Box, when click out of Modal Box
+    window.onclick = function(){
+      if(event.target == modalBox){
+        modalBox.style.display = "None"
       }
-
-      // Close Modal Box, when press esc key
-      document.addEventListener("keydown", function(event){
-        if(event.key == "Escape"){
-          modalBox.style.display = "None"
-        }
-      })
     }
+
+    // Close Modal Box, when press esc key
+    document.addEventListener("keydown", function(event){
+      if(event.key == "Escape"){
+        modalBox.style.display = "None"
+      }
+    })
   }
 }
 
 const portifolio = new Portifolio();
 portifolio.init()
-
