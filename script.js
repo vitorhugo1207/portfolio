@@ -86,6 +86,31 @@ class Portifolio {
           document.querySelector(`#project-${projects[project].name}`).appendChild(p);
         }
         this.setModalBox();
+
+        // setting dynamic information for opened modal boxes
+        // let projectsAll = document.querySelectorAll(".projects")[0].onclick = function(){
+        //   console.log(projectsAll)
+        // }
+
+        // Set data to modalboxes
+        let projectsLength = document.querySelectorAll(".projects")[0].children.length;
+        let modalBox = this.modalBox;
+
+        for(let i = 0; i <= projectsLength - 1; i++){
+          let projectsAll = document.querySelectorAll(".projects")[0].children[i];
+
+          projectsAll.onclick = function(){
+            modalBox.style.display = "block"
+
+            for(let project in projects){
+              if(projects[project].name == projectsAll.children[0].innerHTML){
+                document.querySelectorAll(".modal-box").innerHTML = projects[project].name;
+
+              }
+            }
+          };
+        };
+
       }))
     // return new Promise((resolve, reject)=>{
     //   setTimeout(()=>{
@@ -104,6 +129,7 @@ class Portifolio {
       // Open Modal Box
       projectsAll.onclick = function(){
         modalBox.style.display = "block"
+        // console.log(projectsAll)
       };
     };
     // Close Modal Box, when click at "X"
