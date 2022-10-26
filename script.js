@@ -87,11 +87,6 @@ class Portifolio {
         }
         this.setModalBox();
 
-        // setting dynamic information for opened modal boxes
-        // let projectsAll = document.querySelectorAll(".projects")[0].onclick = function(){
-        //   console.log(projectsAll)
-        // }
-
         // Set data to modalboxes
         let projectsLength = document.querySelectorAll(".projects")[0].children.length;
         let modalBox = this.modalBox;
@@ -108,6 +103,23 @@ class Portifolio {
                 document.querySelector(".about-project-modalBox").innerHTML = projects[project].about;
                 document.querySelector(".learned-modalBox").innerHTML = projects[project].lerned;
                 document.querySelector(".languages-modalBox").innerHTML = projects[project].language;
+
+                // for doesn't repeat links
+                var links = document.querySelectorAll(".link");
+                links.forEach(link => {
+                  link.remove();
+                })
+
+                for(let link in projects[project].links){
+                  var a = document.createElement("a");
+                  a.className = "link"
+                  a.setAttribute('href', projects[project].links[link].link);
+                  a.innerHTML = projects[project].links[link].linkname;
+                  document.querySelector(".links").appendChild(a);
+                  var br = document.createElement("br");
+                  br.className = link
+                  document.querySelector(".links").appendChild(br)
+                }
               }
             }
           };

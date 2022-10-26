@@ -3,21 +3,36 @@
     "name":"Maid-chan",
     "about":"Maid-Chan is a bot for Discord build in Maid-chan is build in Discord.py, has purpose help in the administration of the server, recreation and several utilities. Maid-Chan is also a bot that respect your privicy, so Maid-Chan doesn't collect information unnecessary information.",
     "lerned": "",
-    "link": "",
+    "links": {
+        "1": {
+          "linkname": "github",
+          "link": "https://whaa.dev/how-to-set-href-value-of-anchor-tag-in-javascript#:~:text=To%20set%20the%20href%20value%20of%20an%20anchor,is%20your%20anchor%3A%20%3Ca%20id%3D%22my-link%22%3E%20My%20Link%20%3C%2Fa%3E"
+        },
+        "2":{
+          "linkname": "discord",
+          "link": "https://www.bing.com/search?q=how+to+set+href+in+javascript&cvid=6f690c25d49449bcbf1a62ab5cec6254&aqs=edge.1.69i57j0l8.7426j0j4&FORM=ANAB01&PC=DCTS"
+        }
+    },
     "language":"Python"
   },
   "2":{
     "name":"Derivatives-Tic-Tac-Toe",
     "about":"This project in group of calculus with goal study derivatives. College Fatec Lins.",
     "lerned": "",
-    "link": "",
+    "link": {
+      "github": "",
+      "website": ""
+    },
     "language":"HTML, CSS e JavaScript"
   },
   "3":{
     "name":"portfolio",
     "about":"My portfolio.",
     "lerned": "",
-    "link": "",
+    "link": {
+      "github": "",
+      "website": ""
+    },
     "language":"HTML, CSS e JavaScript"
   }
 }
