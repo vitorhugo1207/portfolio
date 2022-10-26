@@ -2,16 +2,22 @@
   "1":{
     "name":"Maid-chan",
     "about":"Maid-Chan is a bot for Discord build in Maid-chan is build in Discord.py, has purpose help in the administration of the server, recreation and several utilities. Maid-Chan is also a bot that respect your privicy, so Maid-Chan doesn't collect information unnecessary information.",
+    "lerned": "",
+    "link": "",
     "language":"Python"
   },
   "2":{
     "name":"Derivatives-Tic-Tac-Toe",
     "about":"This project in group of calculus with goal study derivatives. College Fatec Lins.",
+    "lerned": "",
+    "link": "",
     "language":"HTML, CSS e JavaScript"
   },
   "3":{
     "name":"portfolio",
     "about":"My portfolio.",
+    "lerned": "",
+    "link": "",
     "language":"HTML, CSS e JavaScript"
   }
 }

@@ -104,8 +104,10 @@ class Portifolio {
 
             for(let project in projects){
               if(projects[project].name == projectsAll.children[0].innerHTML){
-                document.querySelectorAll(".modal-box").innerHTML = projects[project].name;
-
+                document.querySelector(".tittle-project-modalBox").innerHTML = projects[project].name;
+                document.querySelector(".about-project-modalBox").innerHTML = projects[project].about;
+                document.querySelector(".learned-modalBox").innerHTML = projects[project].lerned;
+                document.querySelector(".languages-modalBox").innerHTML = projects[project].language;
               }
             }
           };
