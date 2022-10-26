@@ -117,7 +117,7 @@ class Portifolio {
                   a.innerHTML = projects[project].links[link].linkname;
                   document.querySelector(".links").appendChild(a);
                   var br = document.createElement("br");
-                  br.className = link
+                  br.className = "link"
                   document.querySelector(".links").appendChild(br)
                 }
               }
