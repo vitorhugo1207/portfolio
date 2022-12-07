@@ -17,9 +17,12 @@ class Portifolio {
       // this.setModalBox();
     };
     if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
+      alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.")
       this.setBio();
       this.setPic();
-      alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.")
+      this.setProjects();
+      this.setAbout();
+      this.scrollFixed()
     };
     if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
       this.setAbout()
@@ -164,6 +167,13 @@ class Portifolio {
         modalBox.style.display = "None"
       }
     })
+  };
+
+  async scrollFixed(){
+    document.addEventListener("mousewheel", function(){
+      console.log("funfou!")
+
+    });
   }
 }
 
