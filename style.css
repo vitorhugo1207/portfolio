@@ -209,9 +209,9 @@ h1{
   background: #373b42;
   color: #fff;
   border: 15px solid #373b42;
-  border-left: 8px solid aqua;
+  border-left: 8px solid #192e50;
   box-shadow: 0 0 4px #373b42;
-  flex-basis: 33%;
+  flex-basis: 23%;
   padding-left: 1%;
   cursor: pointer;
 }
