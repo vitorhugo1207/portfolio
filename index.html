@@ -12,7 +12,11 @@
 <!--  for inspirations: discord.com,  -->
 
   <body>
-    <header>
+    <video autoplay muted loop id="VideoBackground">
+      <source src="free-4k-no-copyright-rolling-thunder-clouds-m.mp4" type="video/mp4">
+    </video>
+
+    <header id="home">
       <div id="wrapperJS" style="position: relative; overflow: hidden">
       <nav>
         <a class="logo" href="/">Vitor Hugo</a>
@@ -22,50 +26,54 @@
           <div class="line-3"></div>
         </div>
           <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
             <li><a href="#projects">Projetos</a></li>
-            <li><a href="contatos.html">Contato</a></li>
+            <li><a href="#contacts">Contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <script src="mobile-screen.js"></script>
 
-    <!--  -->
-    <img id="pic" src="error_img.jpg" alt="profile photo">
-    <p id="bio">Error! Tente ativar o JavaScript do seu navedador.</p>
+    <div class="#content">
+      <!--  -->
+      <img id="pic" src="error_img.jpg" alt="profile photo">
+      <p id="bio">Error! Tente ativar o JavaScript do seu navedador.</p>
 
-    <!-- PROJECTS -->
+      <!-- PROJECTS -->
 
-    <!-- Boxes -->
-    <div class="projects" id="projects" style="margin-top: 30vh;"></div>
+      <!-- Boxes -->
+      <div class="projects" id="projects" style="margin-top: 30vh;"></div>
 
-    <!-- Modal Boxes -->
-    <div class="modal-box">
-      <div class="modal-box-contents">
-        <span class="modal-box-close">&times;</span>
+      <!-- Modal Boxes -->
+      <div class="modal-box">
+        <div class="modal-box-contents">
+          <span class="modal-box-close">&times;</span>
 
-        <h1 class="tittle-project-modalBox">Lorem</h1>
-        <p class="about-project-modalBox">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ullam tempora adipisci accusantium molestias eaque, optio hic aperiam, asperiores aspernatur vitae, magnam vero quidem itaque voluptatibus necessitatibus perspiciatis quos deserunt?</p> <br>
+          <h1 class="tittle-project-modalBox">Lorem</h1>
+          <p class="about-project-modalBox">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ullam tempora adipisci accusantium molestias eaque, optio hic aperiam, asperiores aspernatur vitae, magnam vero quidem itaque voluptatibus necessitatibus perspiciatis quos deserunt?</p> <br>
 
-        <h2>What's I learn with that project?</h2>
-        <p class="learned-modalBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet excepturi asperiores enim ipsum, nihil praesentium maiores voluptatum magni, perferendis dolorum dignissimos voluptatem, nostrum voluptatibus architecto soluta dolore magnam autem recusandae.</p> <br>
+          <h2>What's I learn with that project?</h2>
+          <p class="learned-modalBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet excepturi asperiores enim ipsum, nihil praesentium maiores voluptatum magni, perferendis dolorum dignissimos voluptatem, nostrum voluptatibus architecto soluta dolore magnam autem recusandae.</p> <br>
 
-        <h2>What's Technologies used in this project?</h2>
-        <p class="languages-modalBox">HTML, CSS, JavaScript e GitHubAPI.</p> <br>
+          <h2>What's Technologies used in this project?</h2>
+          <p class="languages-modalBox">HTML, CSS, JavaScript e GitHubAPI.</p> <br>
 
-        <h2>Links:</h2>
-        <p class="links"></p>
+          <h2>Links:</h2>
+          <p class="links"></p>
+        </div>
       </div>
-    </div>
 
-    <!-- About me -->
-    <div class="about" style="margin-top: 30vh;">
-      <h1>Mais sobre mim:</h1>
-      <p id="about-content"></p>
-    </div>
+      <!-- About me -->
+      <div class="about" id="about" style="margin-top: 30vh;">
+        <h1>Mais sobre mim:</h1>
+        <p id="about-content"></p>
+      </div>
 
-    <!-- Contatos -->
+      <!-- Contatos -->
+
+      <h1 style="margin-top: 30vh;" id="contacts">Contatos:</h1>
+    </div>
   </body>
 </html>
