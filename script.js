@@ -21,7 +21,7 @@ class Portifolio {
       this.setBio();
       this.setPic();
       this.setProjects();
-      this.setAbout();
+      // this.setAbout();
       this.scrollFixed()
     };
     if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
@@ -168,13 +168,6 @@ class Portifolio {
       }
     })
   };
-
-  async scrollFixed(){
-    document.addEventListener("mousewheel", function(){
-      console.log("funfou!")
-
-    });
-  }
 }
 
 const portifolio = new Portifolio();

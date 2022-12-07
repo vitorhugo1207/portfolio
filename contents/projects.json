@@ -1,38 +1,62 @@
 {
   "1":{
     "name":"Maid-chan",
-    "about":"Maid-Chan is a bot for Discord build in Maid-chan is build in Discord.py, has purpose help in the administration of the server, recreation and several utilities. Maid-Chan is also a bot that respect your privicy, so Maid-Chan doesn't collect information unnecessary information.",
-    "lerned": "",
+    "about":"Maid-Chan é um bot para Discord contruido com discord.py, tem como proposito de entretenimento e utilidades.",
+    "lerned": "Com esse projeto eu aprendi a ler melhor uma documentação de biblioteca e API, programação assíncrona em Python e requests get e post.",
     "links": {
         "1": {
-          "linkname": "github",
-          "link": "https://whaa.dev/how-to-set-href-value-of-anchor-tag-in-javascript#:~:text=To%20set%20the%20href%20value%20of%20an%20anchor,is%20your%20anchor%3A%20%3Ca%20id%3D%22my-link%22%3E%20My%20Link%20%3C%2Fa%3E"
+          "linkname": "GitHub",
+          "link": "https://github.com/vitorhugo1207/Maid-chan"
         },
         "2":{
-          "linkname": "discord",
-          "link": "https://www.bing.com/search?q=how+to+set+href+in+javascript&cvid=6f690c25d49449bcbf1a62ab5cec6254&aqs=edge.1.69i57j0l8.7426j0j4&FORM=ANAB01&PC=DCTS"
+          "linkname": "Discord",
+          "link": "https://discordapp.com/oauth2/authorize?client_id=865657033868050432&scope=bot&permissions=4701503528"
         }
     },
-    "language":"Python"
+    "language":"Python, Discord.py e entre outras bibliotecas e APIs"
   },
   "2":{
     "name":"Derivatives-Tic-Tac-Toe",
-    "about":"This project in group of calculus with goal study derivatives. College Fatec Lins.",
-    "lerned": "",
-    "link": {
-      "github": "",
-      "website": ""
-    },
+    "about":"Um projeto fork de calculo feito em dupla na faculdade Fatec de Lins com o objetivo de estudar derivadas.",
+    "lerned": "Ler um codigo escrito por outro desenvolvedor, trabalhar com mais pessoas para desenvolver um projeto e primeiros passos no JavaScript.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/Derivatives-Tic-Tac-Toe"
+      },
+      "2":{
+        "linkname": "WebSite",
+        "link": "https://vitorhugo1207.github.io/Derivatives-Tic-Tac-Toe/"
+      }
+  },
     "language":"HTML, CSS e JavaScript"
   },
   "3":{
-    "name":"portfolio",
-    "about":"My portfolio.",
-    "lerned": "",
-    "link": {
-      "github": "",
-      "website": ""
-    },
+    "name":"Portfolio",
+    "about":"Meu portfolio aonde um compartilho um pouco sobre mim e meus projetos.",
+    "lerned": "Aprendi sobre um pouco de front-end sem usar um framework, requests em JavaScript.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/portfolio"
+      },
+      "2":{
+        "linkname": "WebSite",
+        "link": "https://vitorhugo1207.github.io/portfolio/"
+      }
+  },
+    "language":"HTML, CSS e JavaScript"
+  },
+  "4":{
+    "name":"VacineLife",
+    "about":"Um projeto proposto no pelo programa de estágio do Laboratório Sodré - Unidade Lins.",
+    "lerned": "Nesse projeto eu aprendi um pouco sobre C#, ASP.NET e SQL.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/VacineLife"
+      }
+  },
     "language":"HTML, CSS e JavaScript"
   }
 }
