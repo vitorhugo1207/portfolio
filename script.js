@@ -22,7 +22,7 @@ class Portifolio {
       this.setPic();
       this.setProjects();
       // this.setAbout();
-      this.scrollFixed()
+      // this.scrollFixed()
     };
     if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
       this.setAbout()
@@ -115,16 +115,22 @@ class Portifolio {
 
                 for(let link in projects[project].links){
                   var a = document.createElement("a");
+                  var img = document.createElement("img");
                   a.className = "link"
                   a.setAttribute('href', projects[project].links[link].link);
-                  a.innerHTML = projects[project].links[link].linkname;
+                  img.setAttribute('src', `linkimg/${projects[project].links[link].linkname}.png`);
+                  img.style.height = "7vh";
+                  img.style.width = "7vh";
+                  a.target = "_blank";
+                  a.appendChild(img);
                   document.querySelector(".links").appendChild(a);
-                  var br = document.createElement("br");
-                  br.className = "link"
-                  document.querySelector(".links").appendChild(br)
-                }
-              }
-            }
+                  // var br = document.createElement("br");
+                  // br.className = "link"
+                  // document.querySelector(".links").appendChild(br);
+
+                };
+              };
+            };
           };
         };
 
