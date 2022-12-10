@@ -181,7 +181,7 @@ h1{
   text-align: center !important;
 }
 
-.about{
+/* .about{
   display: block;
   text-align: justify;
   margin-top: 5%;
@@ -192,7 +192,7 @@ h1{
 
 #about-content{
   margin-top: 5%;
-}
+} */
 
 .projects{
   flex-direction: row;
@@ -287,4 +287,38 @@ h1{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.jobs{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.job{
+  /* width: 20vh; */
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 6vh;
+  background: #373b42;
+  color: #fff;
+  border: 15px solid #373b42;
+  border-left: 8px solid #192e50;
+  box-shadow: 0 0 4px #373b42;
+  flex-basis: 50%;
+  padding-left: 1%;
+  cursor: pointer;
+}
+
+.job:hover{
+  box-shadow: 0 0 10px #373b42;
+  opacity: 0.95;
+  transform: scale(1.02);
+  transition: transform .3s;
+}
+
+.about-job{
+  text-align: justify;
+  padding-top: 2%;
 }

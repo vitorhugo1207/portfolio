@@ -4,9 +4,10 @@ class Portifolio {
     this.pic = document.querySelector("#pic");
     this.about = document.querySelector("#about-content");
     this.projects = document.querySelector(".projects");
-    this.modalBox = document.querySelector(".modal-box");
+    this.jobs = document.querySelector(".jobs");
+    this.modalBox = document.querySelectorAll(".modal-box");
     this.modalBoxContents = document.querySelector(".modal-box-contents");
-    this.modalBoxClose = document.querySelector(".modal-box-close")
+    this.modalBoxClose = document.querySelectorAll(".modal-box-close")
   };
 
   async init() {
@@ -21,6 +22,7 @@ class Portifolio {
       this.setBio();
       this.setPic();
       this.setProjects();
+      this.setJobs();
       // this.setAbout();
       // this.scrollFixed()
     };
@@ -67,7 +69,6 @@ class Portifolio {
       let response_promise = fetch("contents/projects.json")
 
       response_promise.then(response => response.json().then(projects => {
-        // ? Gradient in border for each color language
 
         for(let project in projects){
           // Div project
@@ -88,11 +89,11 @@ class Portifolio {
           p.innerHTML = projects[project].about;
           document.querySelector(`#project-${projects[project].name}`).appendChild(p);
         }
-        this.setModalBox();
+        this.setModalBox("projects", 0);
 
         // Set data to modalboxes
         let projectsLength = document.querySelectorAll(".projects")[0].children.length;
-        let modalBox = this.modalBox;
+        let modalBox = this.modalBox[0];
 
         for(let i = 0; i <= projectsLength - 1; i++){
           let projectsAll = document.querySelectorAll(".projects")[0].children[i];
@@ -142,37 +143,88 @@ class Portifolio {
     // })
   };
 
-  async setModalBox(){
-    let projectsLength = document.querySelectorAll(".projects")[0].children.length;
-    let modalBox = this.modalBox;
+  async setModalBox(id, idModal){
+    let projectsLength = document.querySelectorAll(`.${id}`)[0].children.length;
+    let modalBox = this.modalBox[idModal];
 
     for(let i = 0; i <= projectsLength - 1; i++){
-      let projectsAll = document.querySelectorAll(".projects")[0].children[i];
+      let projectsAll = document.querySelectorAll(`.${id}`)[0].children[i];
 
       // Open Modal Box
       projectsAll.onclick = function(){
         modalBox.style.display = "block"
-        // console.log(projectsAll)
+        // console.log(projectsAll);
       };
     };
     // Close Modal Box, when click at "X"
-    this.modalBoxClose.onclick = function(){
+    this.modalBoxClose[idModal].onclick = function(){
       modalBox.style.display = "None"
     };
-
-    // Close Modal Box, when click out of Modal Box
-    window.onclick = function(){
-      if(event.target == modalBox){
-        modalBox.style.display = "None"
-      }
-    }
 
     // Close Modal Box, when press esc key
     document.addEventListener("keydown", function(event){
       if(event.key == "Escape"){
         modalBox.style.display = "None"
       }
-    })
+    });
+
+    // Close Modal Box, when click out of Modal Box
+    onclick = function(){
+      if(event.target == modalBox){
+        modalBox.style.display = "None"
+      }
+      else if(event.target == modalBox){
+        modalBox.style.display = "None"
+      }
+    }
+  };
+
+  async setJobs(){
+    let response_promise = fetch("contents/jobs.json")
+
+    response_promise.then(response => response.json().then(jobs => {
+      for(let job in jobs){
+        // Div job
+        var div = document.createElement("div");
+        div.className = "job";
+        div.id = `job-${jobs[job].name}`
+        document.querySelector(".jobs").appendChild(div);
+
+        // Tittle job
+        var h1 = document.createElement("h1");
+        h1.className = "tittle-job";
+        h1.innerHTML = jobs[job].name;
+        document.querySelector(`#job-${jobs[job].name}`).appendChild(h1);
+
+        // Paragraph job
+        var p = document.createElement("p");
+        p.className = "about-job";
+        p.innerHTML = jobs[job].about;
+        document.querySelector(`#job-${jobs[job].name}`).appendChild(p);
+      }
+      this.setModalBox("jobs", 1);
+
+      // Set data to modalboxes
+      let jobsLength = document.querySelectorAll(".jobs")[0].children.length;
+      let modalBox = this.modalBox[1];
+
+      for(let i = 0; i <= jobsLength - 1; i++){
+        let jobsAll = document.querySelectorAll(".jobs")[0].children[i];
+
+        jobsAll.onclick = function(){
+            modalBox.style.display = "block"
+
+            for(let job in jobs){
+              if(jobs[job].name == jobsAll.children[0].innerHTML){
+                document.querySelector(".tittle-job-modalBox").innerHTML = jobs[job].name;
+                document.querySelector(".about-job-modalBox").innerHTML = jobs[job].about;
+                document.querySelector(".learned-modalBox").innerHTML = jobs[job].lerned;
+                document.querySelector(".languages-modalBox").innerHTML = jobs[job].language;
+              };
+            };
+          }
+      }
+    }))
   };
 }
 
