@@ -134,7 +134,6 @@ class Portifolio {
             };
           };
         };
-
       }))
     // return new Promise((resolve, reject)=>{
     //   setTimeout(()=>{
@@ -169,14 +168,11 @@ class Portifolio {
     });
 
     // Close Modal Box, when click out of Modal Box
-    onclick = function(){
+    document.addEventListener("click", function(event){
       if(event.target == modalBox){
         modalBox.style.display = "None"
-      }
-      else if(event.target == modalBox){
-        modalBox.style.display = "None"
-      }
-    }
+      };
+    })
   };
 
   async setJobs(){
@@ -193,7 +189,9 @@ class Portifolio {
         // Tittle job
         var h1 = document.createElement("h1");
         h1.className = "tittle-job";
-        h1.innerHTML = jobs[job].name;
+        h1.id = jobs[job].name;
+        let tittle = jobs[job].name;
+        h1.innerHTML = tittle.replace(/-/g, " ");
         document.querySelector(`#job-${jobs[job].name}`).appendChild(h1);
 
         // Paragraph job
@@ -215,11 +213,13 @@ class Portifolio {
             modalBox.style.display = "block"
 
             for(let job in jobs){
-              if(jobs[job].name == jobsAll.children[0].innerHTML){
-                document.querySelector(".tittle-job-modalBox").innerHTML = jobs[job].name;
+              if(jobs[job].name == document.getElementById(jobs[job].name).id){
+                let name = jobs[job].name;
+                document.querySelector(".tittle-job-modalBox").innerHTML = name.replace(/-/g, " ");
                 document.querySelector(".about-job-modalBox").innerHTML = jobs[job].about;
-                document.querySelector(".learned-modalBox").innerHTML = jobs[job].lerned;
-                document.querySelector(".languages-modalBox").innerHTML = jobs[job].language;
+                document.querySelector(".function-modalBox").innerHTML = jobs[job].function;
+                document.querySelector(".learned-job-modalBox").innerHTML = jobs[job].learned;
+                document.querySelector(".time-modalBox").innerHTML = jobs[job].time;
               };
             };
           }
