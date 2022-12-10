@@ -11,24 +11,11 @@ class Portifolio {
   };
 
   async init() {
-    let title = document.title;
-
-    if (title == "Projetos - Vitor Hugo's Portifolio" || title == "Projects - Vitor Hugo's Portfolio") {
-      this.setProjects();
-      // this.setModalBox();
-    };
-    if (title == "Home - Vitor Hugo's Portifolio" || title == "Home - Vitor Hugo's Portfolio") {
-      // alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.")
-      this.setBio();
-      this.setPic();
-      this.setProjects();
-      this.setJobs();
-      // this.setAbout();
-      // this.scrollFixed()
-    };
-    if (title == "Sobre - Vitor Hugo's Portifolio" || title == "About - Vitor Hugo's Portfolio") {
-      this.setAbout()
-    };
+    // alert("Esse site ainda está sendo construido, então pode ter alguns bugs ou informações incompletas.")
+    this.setBio();
+    this.setPic();
+    this.setProjects();
+    this.setJobs();
   };
 
   async setPic() {
