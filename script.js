@@ -16,6 +16,7 @@ class Portifolio {
     this.setPic();
     this.setProjects();
     this.setJobs();
+    this.setContacts();
   };
 
   async setPic() {
@@ -213,6 +214,15 @@ class Portifolio {
       }
     }))
   };
+  async setContacts(){
+    document.addEventListener("click", function(event){
+      if(event.target.id == "whatsappButton"){
+        navigator.clipboard.writeText("14997723162");
+
+        alert("Copiado")
+      }
+    })
+  }
 }
 
 const portifolio = new Portifolio();
