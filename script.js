@@ -106,6 +106,7 @@ class Portifolio {
                   var a = document.createElement("a");
                   var img = document.createElement("img");
                   a.className = "link"
+                  img.className = "link"
                   a.setAttribute('href', projects[project].links[link].link);
                   img.setAttribute('src', `linkimg/${projects[project].links[link].linkname}.png`);
                   img.style.height = "7vh";

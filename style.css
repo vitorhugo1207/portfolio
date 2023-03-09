@@ -95,6 +95,10 @@ h1{
   left: 13%;
 }
 
+.links{
+  text-align: center !important;
+}
+
 /* ------------ Header ------------ */
 nav {
   /* display organize by each side other; justify-content add space around (half of space between them); aligin-items center vertical; */
@@ -343,4 +347,9 @@ nav {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.link:hover{
+  transform: scale(1.20);
+  transition: transform .3s;
 }
