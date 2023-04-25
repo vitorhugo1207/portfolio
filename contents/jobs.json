@@ -1,9 +1,15 @@
 {
   "1":{
     "name":"37º-Batalhão-de-Infantaria-Mecanizado",
-    "about":"Servindo ao exército no 37º BI MEC, como soldado de comunicações na seção de informatica.",
+    "about":"Servi ao exército no 37º BI MEC, como soldado de comunicações na seção de informatica.",
     "function":"Técnico de Informatica.",
-    "learned":"Aprendi muita coisa desde que entrei, como: principios de hierarquia e disciplina, resoluções de problemas, entre outros. Sobre hardskills aprendi mais sobre Windows, Linux, basico de redes, basico de manutenção de hardware etc.",
-    "time":"Março de 2022 até atualmente."
+    "learned":"Aprendi muita coisa desde que entrei, como: principios de hierarquia e disciplina, resoluções de problemas, comunicação, entre outros. Sobre hardskills aprendi mais sobre Windows, Linux, um pouco sobre redes, manutenção de hardware etc.",
+    "time":"1 de Março de 2022 até 14 de Abril de 2022."
+  },
+  "2":{
+    "name":"HM Solucões em Informatica",
+    "about":"Uma empresa de suporte de informatica.",
+    "function":"Tecnico em Manutenção de Equipamentos de Informatica. Eu presto serviço presencial e remoto para empresas.",
+    "time":"15 de Março até atualmente."
   }
 }
