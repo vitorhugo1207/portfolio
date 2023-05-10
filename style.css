@@ -198,6 +198,9 @@ nav {
     width: 100vh;
     flex-basis: 13%;
   }
+  .myname{
+    padding-top: 0.90%;
+  }
 }
 
 .nav-list.active {
