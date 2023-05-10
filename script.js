@@ -7,7 +7,7 @@ class Portifolio {
     this.jobs = document.querySelector(".jobs");
     this.modalBox = document.querySelectorAll(".modal-box");
     this.modalBoxContents = document.querySelector(".modal-box-contents");
-    this.modalBoxClose = document.querySelectorAll(".modal-box-close")
+    this.modalBoxClose = document.querySelectorAll(".modal-box-close");
   };
 
   async init() {
@@ -40,6 +40,14 @@ class Portifolio {
     catch {
       this.bio.innerHTML = "Error! Tente ativar o JavaScript do seu navedador."
     }
+    // Hidden my name when click mobile menu, for not appear in top
+    document.querySelector(".mobile-menu").addEventListener("click", function(){
+      if(document.querySelector(".myname").style.visibility == "hidden"){
+        document.querySelector(".myname").style.visibility = "visible";
+        return;
+      }
+      document.querySelector(".myname").style.visibility = "hidden";
+    })
   };
 
   async setAbout() {
