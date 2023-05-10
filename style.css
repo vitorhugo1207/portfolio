@@ -201,6 +201,9 @@ nav {
   .myname{
     padding-top: 0.90%;
   }
+  .modal-box-contents{
+    margin-top: 40% !important;
+  }
 }
 
 .nav-list.active {
@@ -262,8 +265,8 @@ nav {
 
 .modal-box{
   display: none;
-  position: fixed;
   z-index: 1;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -281,7 +284,7 @@ nav {
   margin: 15% auto;
   padding: 20px;
   width: 60%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   left: 17%;
   top: -20%;
