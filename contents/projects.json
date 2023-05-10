@@ -71,4 +71,16 @@
   },
     "language":"HTML, CSS e JavaScript"
   }
-}
+},
+  "6":{
+    "name":"LibraryC",
+    "about":"Um fork de um projeto desenvolvido pelo o prefessor Julio da Fatec Lins com o proposito de lecionar sobre estruturas de dados em C.",
+    "lerned": "Neste projeto eu aprendi algumas coisas sobre C e manipular arquivos .dat.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/LibraryC/tree/main"
+      }
+  },
+    "language":"C"
+  }
