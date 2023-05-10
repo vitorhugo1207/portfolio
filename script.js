@@ -87,7 +87,7 @@ class Portifolio {
           let projectsAll = document.querySelectorAll(".projects")[0].children[i];
 
           projectsAll.onclick = function(){
-            modalBox.style.display = "block"
+            modalBox.style.display = "block";
 
             for(let project in projects){
               if(projects[project].name == projectsAll.children[0].innerHTML){
@@ -105,8 +105,8 @@ class Portifolio {
                 for(let link in projects[project].links){
                   var a = document.createElement("a");
                   var img = document.createElement("img");
-                  a.className = "link"
-                  img.className = "link"
+                  a.className = "link";
+                  img.className = "link";
                   a.setAttribute('href', projects[project].links[link].link);
                   img.setAttribute('src', `linkimg/${projects[project].links[link].linkname}.png`);
                   img.style.height = "7vh";
@@ -199,12 +199,11 @@ class Portifolio {
         let jobsAll = document.querySelectorAll(".jobs")[0].children[i];
 
         jobsAll.onclick = function(){
-            modalBox.style.display = "block"
+            modalBox.style.display = "block";
 
             for(let job in jobs){
-              if(jobs[job].name == document.getElementById(jobs[job].name).id){
-                let name = jobs[job].name;
-                document.querySelector(".tittle-job-modalBox").innerHTML = name.replace(/-/g, " ");
+              if(jobs[job].name == jobsAll.children[0].id){
+                document.querySelector(".tittle-job-modalBox").innerHTML = (jobs[job].name).replace(/-/g, " ");
                 document.querySelector(".about-job-modalBox").innerHTML = jobs[job].about;
                 document.querySelector(".function-modalBox").innerHTML = jobs[job].function;
                 document.querySelector(".learned-job-modalBox").innerHTML = jobs[job].learned;
@@ -215,6 +214,7 @@ class Portifolio {
       }
     }))
   };
+
   async setContacts(){
     document.addEventListener("click", function(event){
       if(event.target.id == "whatsappButton"){
