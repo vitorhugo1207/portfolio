@@ -19,6 +19,22 @@ class Portifolio {
     this.setContacts();
   };
 
+  setBlockScroll(){
+    document.getElementsByTagName("body")[0].style = `
+    overflow-x: hidden;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;`
+  }
+
+  unsetBlockScroll(){
+    document.getElementsByTagName("body")[0].style = `
+    overflow-x: visible;
+    margin: auto;
+    height: auto;
+    overflow: visible;`
+  }
+
   async setPic() {
     try {
       let response = await fetch("https://api.github.com/users/vitorhugo1207");
@@ -40,14 +56,6 @@ class Portifolio {
     catch {
       this.bio.innerHTML = "Error! Tente ativar o JavaScript do seu navedador."
     }
-    // Hidden my name when click mobile menu, for not appear in top
-    document.querySelector(".mobile-menu").addEventListener("click", function(){
-      if(document.querySelector(".myname").style.visibility == "hidden"){
-        document.querySelector(".myname").style.visibility = "visible";
-        return;
-      }
-      document.querySelector(".myname").style.visibility = "hidden";
-    })
   };
 
   async setAbout() {
@@ -94,7 +102,8 @@ class Portifolio {
         for(let i = 0; i <= projectsLength - 1; i++){
           let projectsAll = document.querySelectorAll(".projects")[0].children[i];
 
-          projectsAll.onclick = function(){
+          projectsAll.onclick = () => {
+            this.setBlockScroll();
             modalBox.style.display = "block";
 
             for(let project in projects){
@@ -143,31 +152,25 @@ class Portifolio {
     let projectsLength = document.querySelectorAll(`.${id}`)[0].children.length;
     let modalBox = this.modalBox[idModal];
 
-    for(let i = 0; i <= projectsLength - 1; i++){
-      let projectsAll = document.querySelectorAll(`.${id}`)[0].children[i];
-
-      // Open Modal Box
-      projectsAll.onclick = function(){
-        modalBox.style.display = "block"
-        // console.log(projectsAll);
-      };
-    };
     // Close Modal Box, when click at "X"
-    this.modalBoxClose[idModal].onclick = function(){
-      modalBox.style.display = "None"
+    this.modalBoxClose[idModal].onclick = () =>{
+      modalBox.style.display = "None";
+      this.unsetBlockScroll(); // to call this in a anonymous function use arrow function
     };
 
     // Close Modal Box, when press esc key
-    document.addEventListener("keydown", function(event){
+    document.addEventListener("keydown", (event) => {
       if(event.key == "Escape"){
-        modalBox.style.display = "None"
+        modalBox.style.display = "None";
+        this.unsetBlockScroll();
       }
     });
 
     // Close Modal Box, when click out of Modal Box
-    document.addEventListener("click", function(event){
+    document.addEventListener("click", (event) => {
       if(event.target == modalBox){
-        modalBox.style.display = "None"
+        modalBox.style.display = "None";
+        this.unsetBlockScroll();
       };
     })
   };
@@ -206,7 +209,8 @@ class Portifolio {
       for(let i = 0; i <= jobsLength - 1; i++){
         let jobsAll = document.querySelectorAll(".jobs")[0].children[i];
 
-        jobsAll.onclick = function(){
+        jobsAll.onclick = () => {
+            this.setBlockScroll();
             modalBox.style.display = "block";
 
             for(let job in jobs){

@@ -10,6 +10,17 @@ class MobileNavbar{
     this.handleClick = this.handleClick.bind(this);
   };
 
+  hiddenName(){
+    // Hidden my name when click mobile menu, for not appear in top
+    document.querySelector(".mobile-menu").addEventListener("click", function(){
+      if(document.querySelector(".myname").style.visibility == "hidden"){
+        document.querySelector(".myname").style.visibility = "visible";
+        return;
+      }
+      document.querySelector(".myname").style.visibility = "hidden";
+    })
+  }
+
   animateLinks(){
     this.navLinks.forEach((link, index) => {
       link.style.animation
@@ -30,6 +41,7 @@ class MobileNavbar{
   }
 
   init(){
+    // hiddenName()
     if(this.mobileMenu){
       this.addClickEvent();
     };

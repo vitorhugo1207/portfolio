@@ -3,6 +3,14 @@ body{
   /* background-color: #29344a; */
   background-color: #10141d;
   color: #fff;
+
+  /* -- Disable selection -- */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 /* header{
@@ -50,12 +58,19 @@ html{
   font-size: 4vh;
   text-transform: uppercase;
   letter-spacing: 5px;
-  position: absolute;
+  font-weight: normal;
+
+  /* position: absolute;
   padding-top: 2%;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  font-weight: normal;
+  width: 100%; */
+
+  margin: 0;
+  padding: 0;
+  float: left;
+  padding-left: 42%;
+  margin-top: 2%;
 }
 
 .wrapper{
@@ -199,10 +214,13 @@ nav {
     flex-basis: 13%;
   }
   .myname{
-    padding-top: 0.90%;
+    margin-left: -12% !important;
   }
   .modal-box-contents{
     margin-top: 40% !important;
+  }
+  #bio{
+    margin-top: 10%;
   }
 }
 
@@ -372,4 +390,8 @@ nav {
 .link:hover{
   transform: scale(1.20);
   transition: transform .3s;
+}
+
+.myname:hover{
+  opacity: 0.8;
 }
