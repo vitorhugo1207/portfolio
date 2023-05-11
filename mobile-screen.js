@@ -41,7 +41,7 @@ class MobileNavbar{
   }
 
   init(){
-    // hiddenName()
+    this.hiddenName();
     if(this.mobileMenu){
       this.addClickEvent();
     };

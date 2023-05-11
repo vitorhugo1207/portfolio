@@ -60,17 +60,17 @@ html{
   letter-spacing: 5px;
   font-weight: normal;
 
-  /* position: absolute;
+  position: absolute;
   padding-top: 2%;
   margin-left: auto;
   margin-right: auto;
-  width: 100%; */
+  width: 100%;
 
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   float: left;
   padding-left: 42%;
-  margin-top: 2%;
+  margin-top: 2%; */
 }
 
 .wrapper{
@@ -212,9 +212,6 @@ nav {
   .project{
     width: 100vh;
     flex-basis: 13%;
-  }
-  .myname{
-    margin-left: -12% !important;
   }
   .modal-box-contents{
     margin-top: 40% !important;
