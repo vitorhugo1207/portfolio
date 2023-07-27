@@ -1,3 +1,5 @@
+// Ideias para o portifólio 2.0 https://www.youtube.com/watch?v=vET-5YkY9no
+
 class Portifolio {
   constructor() {
     this.bio = document.querySelector("#bio");
