@@ -1,86 +1,82 @@
 {
-  "1":{
-    "name":"Maid-chan",
-    "about":"Maid-Chan é um bot para Discord contruido com discord.py, tem como proposito de entretenimento e utilidades.",
-    "lerned": "Com esse projeto eu aprendi a ler melhor uma documentação de biblioteca e API, programação assíncrona em Python e requests get e post.",
-    "links": {
-        "1": {
-          "linkname": "GitHub",
-          "link": "https://github.com/vitorhugo1207/Maid-chan"
-        },
-        "2":{
-          "linkname": "Discord",
-          "link": "https://discordapp.com/oauth2/authorize?client_id=865657033868050432&scope=bot&permissions=4701503528"
-        }
-    },
-    "language":"Python, Discord.py e entre outras bibliotecas e APIs"
-  },
-  "2":{
-    "name":"Derivatives-Tic-Tac-Toe",
-    "about":"Um projeto fork de calculo feito em dupla na faculdade Fatec de Lins com o objetivo de estudar derivadas.",
-    "lerned": "Ler um codigo escrito por outro desenvolvedor, trabalhar com mais pessoas para desenvolver um projeto e primeiros passos no JavaScript.",
+  "1": {
+    "name": "todolist",
+    "about": "Um projeto feito com um curso disponibilizado pela Rocketseat e com os conhecimentos adiquiridos na faculdade.",
+    "lerned": "Com esse projecto eu aprimorei minha lógica de programação e aprendi a desenvolver uma API REST em Java com Spring Boot.",
+    "language": "Java, Spring Boot e API REST",
     "links": {
       "1": {
         "linkname": "GitHub",
-        "link": "https://github.com/vitorhugo1207/Derivatives-Tic-Tac-Toe"
-      },
-      "2":{
-        "linkname": "WebSite",
-        "link": "https://vitorhugo1207.github.io/Derivatives-Tic-Tac-Toe/"
+        "link": "https://github.com/vitorhugo1207/todolist"
       }
+    }
   },
-    "language":"HTML, CSS e JavaScript"
-  },
-  "3":{
-    "name":"Portfolio",
-    "about":"Meu portfolio aonde um compartilho um pouco sobre mim e meus projetos.",
-    "lerned": "Aprendi sobre um pouco de front-end sem usar um framework, requests em JavaScript.",
-    "links": {
-      "1": {
-        "linkname": "GitHub",
-        "link": "https://github.com/vitorhugo1207/portfolio"
-      },
-      "2":{
-        "linkname": "WebSite",
-        "link": "https://vitorhugo1207.github.io/portfolio/"
-      }
-  },
-    "language":"HTML, CSS e JavaScript"
-  },
-  "4":{
-    "name":"VacineLife",
-    "about":"Um projeto proposto no pelo programa de estágio do Laboratório Sodré - Unidade Lins.",
-    "lerned": "Nesse projeto eu aprendi um pouco sobre C#, ASP.NET e SQL.",
-    "links": {
-      "1": {
-        "linkname": "GitHub",
-        "link": "https://github.com/vitorhugo1207/VacineLife"
-      }
-  },
-    "language":"HTML, CSS e JavaScript"
-  },
-  "5":{
-    "name":"Weatherco",
-    "about":"Um programa para mostrar a previsão do tempo.",
+  "2": {
+    "name": "Weatherco",
+    "about": "Um programa para mostrar a previsão do tempo.",
     "lerned": "Melhorar minha habilidades de rogramação orientada o objetos e consultas em API, e amplificar conhecimentos em HTML, CSS, JavaScript, Eletron.JS, Node.JS e React.JS.",
     "links": {
       "1": {
         "linkname": "GitHub",
         "link": "https://github.com/vitorhugo1207/Weatherco"
       }
+    },
+    "language": "HTML, CSS e JavaScript"
   },
-    "language":"HTML, CSS e JavaScript"
+  "3": {
+    "name": "Maid-chan",
+    "about": "Maid-Chan é um bot para Discord contruido com discord.py, tem como proposito de entretenimento e utilidades.",
+    "lerned": "Com esse projeto eu aprendi a ler melhor uma documentação de biblioteca e API, programação assíncrona em Python e requests get e post.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/Maid-chan"
+      },
+      "2": {
+        "linkname": "Discord",
+        "link": "https://discordapp.com/oauth2/authorize?client_id=865657033868050432&scope=bot&permissions=4701503528"
+      }
+    },
+    "language": "Python, Discord.py e entre outras bibliotecas e APIs"
   },
-  "6":{
-    "name":"LibraryC",
-    "about":"Um fork de um projeto desenvolvido pelo o prefessor Julio da Fatec Lins com o proposito de lecionar sobre estruturas de dados em C.",
+  "4": {
+    "name": "Organizer",
+    "about": "Um simples programa feito em Python para organizar pastas no Windows 10 e 11. Ele envia notificação com as opções de abrir, mostrar no explorer ou mover o arquivo para outra localização quando algum arquivo é organizado (movido).",
+    "lerned": "Com esse projeto eu aprimorei minha lógica de programação e meus conhecimentos de Python.",
+    "language": "Python e windows_toasts",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/Organizer"
+      }
+    }
+  },
+  "5": {
+    "name": "Derivatives-Tic-Tac-Toe",
+    "about": "Um projeto fork de calculo feito em dupla na faculdade Fatec de Lins com o objetivo de estudar derivadas.",
+    "lerned": "Ler um codigo escrito por outro desenvolvedor, trabalhar com mais pessoas para desenvolver um projeto e primeiros passos no JavaScript.",
+    "links": {
+      "1": {
+        "linkname": "GitHub",
+        "link": "https://github.com/vitorhugo1207/Derivatives-Tic-Tac-Toe"
+      },
+      "2": {
+        "linkname": "WebSite",
+        "link": "https://vitorhugo1207.github.io/Derivatives-Tic-Tac-Toe/"
+      }
+    },
+    "language": "HTML, CSS e JavaScript"
+  },
+  "6": {
+    "name": "LibraryC",
+    "about": "Um fork de um projeto desenvolvido pelo o prefessor Julio da Fatec Lins com o proposito de lecionar sobre estruturas de dados em C.",
     "lerned": "Neste projeto eu aprendi algumas coisas sobre C e manipular arquivos .dat.",
     "links": {
       "1": {
         "linkname": "GitHub",
         "link": "https://github.com/vitorhugo1207/LibraryC/tree/main"
       }
-  },
-    "language":"Linguagem C"
+    },
+    "language": "Linguagem C"
   }
 }
